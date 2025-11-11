@@ -1,0 +1,214 @@
+/* ---------- PROFILE PAGE STYLING ---------- */
+
+.profilePage {
+  min-height: 100vh;
+  background: linear-gradient(145deg, #4e5526 0%, #636b2f 50%, #8f9960 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+/* Profile Card */
+.profileBox {
+  margin-top: 90px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  width: 65%;
+  max-width: 800px;
+  padding: 40px 60px;
+  color: white;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Inner Flex Layout */
+.dataContainer {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Avatar Circle */
+.profileAvatar {
+  width: 110px;
+  height: 110px;
+  background: linear-gradient(145deg, #7b834b, #4e5526);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 45px;
+  font-weight: 700;
+  color: #fff;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profileAvatar:hover {
+  transform: scale(1.07);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Data Section */
+.data {
+  flex: 1;
+}
+
+/* Name Input + Edit Button */
+.nameContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nameInput {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #bfc99a;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 500;
+  padding: 6px 5px;
+  outline: none;
+  transition: all 0.3s ease;
+  width: 80%;
+}
+
+.nameInput::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.nameInput:focus {
+  border-color: #fff;
+  transform: scale(1.02);
+}
+
+/* Edit Button */
+.editBtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.editBtn img {
+  width: 24px;
+  filter: invert(90%);
+}
+
+.editBtn:hover {
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* Email Section */
+.emailContainer {
+  margin-top: 20px;
+}
+
+.email {
+  color: #000000;
+  font-size: 17px;
+  margin-bottom: 6px;
+}
+
+/* Status Badge */
+.profileStatus {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+
+}
+
+.notVerified{
+  background-color: #d94423;
+  color: #1d2613;
+  box-shadow: 0 2px 8px rgba(143, 191, 106, 0.6);
+
+}
+
+.notVerified:hover{
+   background-color: rgb(197, 28, 28);
+  color: white;
+
+}
+
+.verified:hover{
+  background-color: green;
+  color: white;
+
+}
+.verified {
+  background-color: #8fbf6a;
+  color: #1d2613;
+  box-shadow: 0 2px 8px rgba(143, 191, 106, 0.6);
+}
+
+/* Change Password Button */
+.changePasswordContainer {
+  margin-top: 25px;
+}
+
+.changePasswordBtn {
+  background: linear-gradient(135deg, #5f6730, #89954c);
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.changePasswordBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 255, 255, 0.2);
+  background: linear-gradient(135deg, #89954c, #5f6730);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .profileBox {
+    width: 85%;
+    padding: 30px 25px;
+  }
+
+  .dataContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nameInput {
+    width: 100%;
+    text-align: center;
+  }
+
+  .changePasswordBtn {
+    width: 100%;
+  }
+}

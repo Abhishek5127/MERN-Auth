@@ -1,0 +1,136 @@
+.nav {
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #636B2F;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo > img {
+  width: 75px;
+  height: 75px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 30px;
+}
+
+.logo h2 {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+}
+
+/* Profile wrapper (to contain hover dropdown) */
+.profileWrapper {
+  position: relative;
+  margin-right: 40px;
+}
+
+/* Circle button */
+.profileContainer {
+  width: 27px;
+  height: 27px;
+  background-color: black;
+  border: none;
+  border-radius: 50px;
+  padding: 10px;
+  color: white;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+
+.profileContainer:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Dropdown menu */
+.profileDropdown {
+  list-style: none;
+  position: absolute;
+  top: 47px; /* below the profile button */
+  right: 0;
+  background-color: #f2f2e4;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  width: 240px;
+  z-index: 999;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+/* Dropdown list items */
+.profileDropdown li {
+  padding: 8px 16px;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.profileDropdown li:hover {
+  background-color: #c9ce9e;
+}
+
+/* Horizontal line between info and actions */
+.profileDropdown hr {
+  border: 0;
+  height: 1px;
+  background-color: #ddd;
+  margin: 6px 0;
+}
+
+/* User name style */
+.userName {
+  color: #424d1e;
+  font-weight: 600;
+  cursor: default;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.userButtonsContainer {
+  display: flex;
+  gap: 50px;
+  margin: 0 110px;
+}
+
+.signup, .login {
+  font-size: 17px;
+  font-family: 'Poppins', sans-serif;
+  align-items: center;
+  background-color: #7e8269ee;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 10px;
+  display: flex;
+  gap: 2px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  color: white;
+}
+
+.signup:hover, .login:hover {
+  background-color: rgb(135, 172, 230);
+}
+
+.login > img {
+  width: 20px;
+  height: 20px;
+}

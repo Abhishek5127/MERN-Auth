@@ -1,0 +1,144 @@
+.ev-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4e5526 0%, #636b2f 50%, #8f9960 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.ev-card {
+  width: min(560px, 92vw);
+  background: rgba(255, 255, 245, 0.1);
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  border-radius: 22px;
+  backdrop-filter: blur(10px);
+  padding: 32px 28px;
+  color: #fff;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+  animation: evFadeIn 0.6s ease-out both;
+}
+
+.ev-header {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.ev-icon-wrap {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 10px auto;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #7b834b, #4e5526);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.28);
+}
+
+.ev-icon-wrap img {
+  width: 32px;
+  height: 32px;
+  filter: invert(95%);
+}
+
+.ev-header h2 {
+  margin: 6px 0 4px 0;
+  font-size: 26px;
+  letter-spacing: 0.4px;
+}
+
+.ev-sub {
+  opacity: 0.9;
+  font-size: 14px;
+  color: #f2f2e9;
+}
+
+.ev-otp {
+  margin: 22px auto 18px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+  max-width: 420px;
+}
+
+.ev-otp-input {
+  width: 58px;
+  height: 66px;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  border-radius: 14px;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  outline: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+
+.ev-otp-input:focus {
+  transform: translateY(-2px);
+  border-color: #ffffff;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.ev-verify-btn {
+  width: 100%;
+  margin-top: 6px;
+  background: linear-gradient(135deg, #5f6730, #89954c);
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.25s ease;
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.22);
+}
+
+.ev-verify-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.26);
+}
+
+.ev-foot {
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  align-items: center;
+  color: #f2f2e9;
+  font-size: 14px;
+}
+
+.ev-resend {
+  border: none;
+  background: transparent;
+  color: #e6ffb5;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.ev-resend:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+@keyframes evFadeIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 480px) {
+  .ev-otp {
+    gap: 10px;
+  }
+  .ev-otp-input {
+    width: 48px;
+    height: 58px;
+    font-size: 22px;
+  }
+}
