@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-
+//editing for githance check
 const userAuth = async (req, res, next) => {
   const { token } = req.cookies;
 
